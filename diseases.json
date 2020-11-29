@@ -20,7 +20,7 @@
    "symptom3": "High fever",
    "symptom4": "Sweating",
    "symptom5": "Headache",
-   "precaution1": "Consult neaRest hospital",
+   "precaution1": "Consult nearest hospital",
    "precaution2": "Avoid oily food",
    "precaution3": "Avoid non veg food",
    "precaution4": "Keep mosquitoes out"
@@ -98,7 +98,7 @@
    "symptom3": "Yellowish skin",
    "symptom4": "Dark urine",
    "symptom5": " Diarrhoea",
-   "precaution1": "Consult neaRest hospital",
+   "precaution1": "Consult nearest hospital",
    "precaution2": "Wash hands through",
    "precaution3": "Avoid fatty spicy food",
    "precaution4": "Medication"
@@ -112,7 +112,7 @@
    "symptom4": "Swelling joints",
    "symptom5": "Painful walking",
    "precaution1": "Acetaminophen",
-   "precaution2": "Consult neaRest hospital",
+   "precaution2": "Consult nearest hospital",
    "precaution3": "Follow up",
    "precaution4": "Salt baths"
  },
@@ -345,7 +345,7 @@
    "symptom3": "Malaise",
    "symptom4": "Yellow urine",
    "symptom5": "Abdominal pain",
-   "precaution1": "Consult neaRest hospital",
+   "precaution1": "Consult nearest hospital",
    "precaution2": "vaccination",
    "precaution3": "Eat healthy",
    "precaution4": "Medication"
@@ -371,7 +371,7 @@
    "symptom3": "Loss of appetite",
    "symptom4": "",
    "symptom5": "",
-   "precaution1": "Consult neaRest hospital",
+   "precaution1": "Consult nearest hospital",
    "precaution2": "Vaccination",
    "precaution3": "Eat healthy",
    "precaution4": "Medication"

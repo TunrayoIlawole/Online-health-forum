@@ -1,7 +1,17 @@
 const domElements = {
     main: document.querySelector('.main'),
-    searchBar: document.querySelector('.search-keyword'),
-    seeList: document.querySelector('.see-list')
+    searchBar: document.querySelector('.search-container'),
+    searchInput: document.querySelector('.search-keyword'),
+    seeList: document.querySelector('.see-list'),
+    modal: document.getElementById('modal'),
+    close: document.querySelector('.close'),
+    title: document.querySelector('h3'),
+    description: document.querySelector('.description'),
+    symptoms: document.querySelector('.symptoms-list'),
+    prec1: document.querySelector('.precaution1'),
+    prec2: document.querySelector('.precaution2'),
+    prec3: document.querySelector('.precaution3'),
+    prec4: document.querySelector('.precaution4')
 }
 
 
@@ -42,7 +52,7 @@ window.getDiseases = async function() {
 
             const infoLink = document.createElement('a');
             infoLink.classList.add('more-info');
-            infoLink.href = "more-info.html";
+            infoLink.href = "#";
             infoLink.textContent = "Click for more info";
 
             itemCon.append(diseaseTitle);
@@ -50,6 +60,26 @@ window.getDiseases = async function() {
             itemCon.append(infoLink);
 
             domElements.main.append(itemCon);
+
+            infoLink.addEventListener('click', (e) => {
+                const name = e.target.parentElement.firstChild.textContent;
+                console.log(name);
+
+                if(name === item.disease) {
+                    domElements.title.textContent = item.disease;
+                    domElements.description.textContent = item.description;
+                    domElements.symptoms.textContent = `${item.symptom1}, ${item.symptom2}, ${item.symptom3}, ${item.symptom4}, ${item.symptom5}`;
+                    domElements.prec1.textContent = item.precaution1;
+                    domElements.prec2.textContent = item.precaution2;
+                    domElements.prec3.textContent = item.precaution3;
+                    domElements.prec4.textContent = item.precaution4;
+                }
+
+                domElements.modal.classList.add('show');
+                domElements.main.classList.add('hide');
+                domElements.searchBar.classList.add('hide');
+                domElements.seeList.classList.add('hide');
+            });
 
 
         });
@@ -62,7 +92,7 @@ window.getDiseases = async function() {
 
 const searchByKeyword = async function() {
     domElements.main.innerHTML = "";
-    let value = domElements.searchBar.value.toLowerCase();
+    let value = domElements.searchInput.value.toLowerCase();
 
     try {
         const result = await fetch (requestFile);
@@ -102,7 +132,7 @@ const searchByKeyword = async function() {
 
             const infoLink = document.createElement('a');
             infoLink.classList.add('more-info');
-            infoLink.href = "more-info.html";
+            infoLink.href = "#";
             infoLink.textContent = "Click for more info";
 
             itemCon.append(diseaseTitle);
@@ -110,6 +140,26 @@ const searchByKeyword = async function() {
             itemCon.append(infoLink);
 
             domElements.main.append(itemCon);
+
+            infoLink.addEventListener('click', (e) => {
+                const name = e.target.parentElement.firstChild.textContent;
+                console.log(name);
+
+                if(name === data.disease) {
+                    domElements.title.textContent = data.disease;
+                    domElements.description.textContent = data.description;
+                    domElements.symptoms.textContent = `${data.symptom1}, ${data.symptom2}, ${data.symptom3}, ${data.symptom4}, ${data.symptom5}`;
+                    domElements.prec1.textContent = data.precaution1;
+                    domElements.prec2.textContent = data.precaution2;
+                    domElements.prec3.textContent = data.precaution3;
+                    domElements.prec4.textContent = data.precaution4;
+                }
+
+                domElements.modal.classList.add('show');
+                domElements.main.classList.add('hide');
+                domElements.searchBar.classList.add('hide');
+                domElements.seeList.classList.add('hide');
+            })
         });
     }
     catch (error) {
@@ -117,8 +167,12 @@ const searchByKeyword = async function() {
     }
 }
 
-
-
 window.addEventListener('load', getDiseases);
 domElements.searchBar.addEventListener('input', searchByKeyword);
 
+domElements.close.addEventListener('click', () => {
+    domElements.modal.classList.toggle('show');
+    domElements.main.classList.toggle('hide');
+    domElements.searchBar.classList.toggle('hide');
+    domElements.seeList.classList.toggle('hide');
+});
