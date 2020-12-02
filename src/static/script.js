@@ -531,6 +531,19 @@ const diseases = [
       precaution2: "Consult doctor",
       precaution3: "Medication",
       precaution4: "Rest"
+    },
+    {
+      disease: "Appendicitis",
+      description: "Appendicitis is the painful swelling of the appendix. The appendix is a small, thin pouch about 5 - 10 cm (2 -4 inches) long. It is connected to the large intestine where stools (faeces) are formed. Nobody knows why we have an appendix, but removing it isn't harmful.",
+      symptom1: "Coughing",
+      symptom2: "Appetite Loss",
+      symptom3: "Pain in abdomen",
+      symptom4: "Diarrhoea",
+      symptom5: "Nausea",
+      precaution1: "Remove appendix surgically (appendectomy)",
+      precaution2: "Consult doctor",
+      precaution3: "Do not use heating pads",
+      precaution4: "Do not use any pain remedies"
     }
 ]
 
