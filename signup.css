@@ -23,14 +23,28 @@ header .logo h2 a{
 	color: #fff;
 }
 
-header  .search-keyword{
-	width: 240px;
-	outline: none;
-	border-radius: 15px;
-	padding: 8px 15px;
-	border: none;
-	color: #333;
+
+header .navbar .navbar-links{
+	padding-top: 8px;	
+	display: flex;
+	flex-direction: row;
+	padding-right: 80px;
+}
+
+header .navbar .navbar-links li{
+	list-style: none;
 	font-weight: 300;
+	padding-right: 20px;	
+}
+
+header .navbar .navbar-links li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+header .navbar .navbar-links li a:hover,
+header .navbar .navbar-links li a:focus{
+	color: #79258e;
 }
 
 section{
