@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	color: #fff;
+	background: #BA55D3;
+}
+
+header{
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+header .logo h2 a{
+	font-weight: 500;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #fff;
+}
+
+header  .navbar-links{
+	padding-top: 8px;	
+	display: flex;
+	flex-direction: row;
+	padding-right: 80px;
+}
+
+header  .navbar-links li{
+	list-style: none;
+	font-weight: 300;
+	padding-right: 20px;	
+}
+
+header  .navbar-links li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+header .navbar-links li a:hover,
+header  .navbar-links li a:focus{
+	color: #79258e;
+}
+
+section{
+	margin-top: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+section .container{
+	background: #fff;
+	border-radius: 15px;
+	padding: 4% 3%;
+	width: 450px;
+	height: 450px;
+	box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+section .container .reg{
+	margin-bottom: 30px;
+}
+
+section .container .reg .signup{
+	color: #BA55D3;
+	font-size: 2.2em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+section .container .reg .signin{
+	color: #999;
+	font-size: 1.4em;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+section .container input{
+	line-height: 1.5em;
+	padding: 10px;
+	border: 2px solid #999;
+	outline: none;
+	border-radius: 30px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+section .container .forgetBtn{
+	float: right;
+	font-size: 0.9em;
+	color: red;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+section .container input[type="submit"]{
+	clear: both;
+	display: flex;
+	justify-content: center;
+	background:#BA55D3;
+	width: 70%;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	margin: auto;
+	box-shadow: 6px 5px 25px rgba(0,0,0,0.4);
+	margin-top: 20px;
+	z-index: 1000;
+	font-size: 1.2em;
+	padding: 10px;
+}
