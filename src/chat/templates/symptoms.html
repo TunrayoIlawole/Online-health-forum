@@ -1,20 +1,14 @@
-{% load static %}
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "{% static 'styles.css' %}" />
+    <link rel = "stylesheet" href = "styles.css" />
     <title>Symptoms</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h2>HealthCare Plus</h2>
-        </div>
-        {% include "navbar.html" %}
-    </header>
     <div class = "container">
+        <h1>HealthCare Plus</h1>
 
         <h2>Symptoms</h2>
         <div class = "search-container">
@@ -27,6 +21,7 @@
         <div class = "main">
             
         </div>
+
         <div id = "modal" class = "modal">
             <span class="close" title="Close Modal">&times;</span>
             <div class = "main-con">
@@ -54,22 +49,22 @@
                         <div class = "specialist">
                             <p class = "name">Dr. Owens Wiwa</p>
     
-                            <a href = "http://127.0.0.1:8000/chat/Dr.Owenswiwa" class = "message">message</a>
+                            <a href = "#" class = "message">message</a>
                         </div>
                         <div class = "specialist">
                             <p class = "name">Dr. Ola Orekunrin</p>
     
-                            <a href = "http://127.0.0.1:8000/chat/Dr.OlaOrekunrin" class = "message">message</a>
+                            <a href = "#" class = "message">message</a>
                         </div>
                         <div class = "specialist">
                             <p class = "name">Dr. Olurotimi badero</p>
     
-                            <a href = "http://127.0.0.1:8000/chat/Dr.Olurotimibadero" class = "message">message</a>
+                            <a href = "#" class = "message">message</a>
                         </div>
                         <div class = "specialist">
                             <p class = "name">Dr. Seyi Oyesola</p>
     
-                            <a href = "http://127.0.0.1:8000/chat/Dr.SeyiOyesola" class = "message">message</a>
+                            <a href = "#" class = "message">message</a>
                         </div>
     
                     </div>
@@ -79,6 +74,6 @@
     </div>
     
 
-    <script src="{% static 'script.js' %}"></script>
+    <script src = "script.js"></script>
 </body>
-</html> 
+</html>
