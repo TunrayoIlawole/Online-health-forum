@@ -1,0 +1,145 @@
+{% load crispy_forms_tags %}
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta content="width=device-width, initial-scale=1.0"/>
+		<title>Sign Up</title>
+		<style type= "text/css">
+			*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			}
+
+			body{
+				color: #BA55D3;
+				background: #BA55D3;
+			}
+
+			header{
+				padding: 20px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			header .logo h2 a{
+				font-weight: 500;
+				font-size: 1.2em;
+				text-decoration: none;
+				color: #fff;
+			}
+
+			header  .search-keyword{
+				width: 240px;
+				outline: none;
+				border-radius: 15px;
+				padding: 8px 15px;
+				border: none;
+				color: #333;
+				font-weight: 300;
+			}
+
+			section{
+				margin-top: 10vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+
+			section .container{
+				background: #fff;
+				border-radius: 15px;
+				padding: 4% 3%;
+				width: 550px;
+				box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+			}
+
+			section .container .reg{
+				margin-bottom: 30px;
+			}
+
+			section .container .reg .signup{
+				color: #BA55D3;
+				font-size: 2.2em;
+				font-weight: 500;
+				text-decoration: none;
+				padding-bottom: 10px;
+			}
+
+			section .container .reg .signin{
+				color: #999;
+				font-size: 1.4em;
+				font-weight: 500;
+				text-decoration: none;
+			}
+
+			section .container input{
+				line-height: 1.5em;
+				padding: 10px;
+				border: 2px solid #999;
+				outline: none;
+				border-radius: 30px;
+				margin-bottom: 20px;
+				width: 100%;
+			}
+
+			section .container .forgetBtn{
+				float: right;
+				font-size: 0.9em;
+				color: red;
+				text-decoration: none;
+				margin-bottom: 20px;
+			}
+
+			section .container input[type="submit"]{
+				clear: both;
+				display: flex;
+				justify-content: center;
+				background:#BA55D3;
+				width: 70%;
+				color: #BA55D3;
+				cursor: pointer;
+				border: none;
+				margin: auto;
+				box-shadow: 6px 5px 25px rgba(0,0,0,0.4);
+				margin-top: 20px;
+				z-index: 1000;
+				font-size: 1.2em;
+				padding: 10px;
+			}
+		</style>
+
+	</head>	
+	<body>
+		<header>
+			<div class="logo">
+				<h2><a href="http://127.0.0.1:8000">HealthCare Plus</a></h2>
+			</div>
+			<div class="search-container">
+				<input type = "search" name = "Search" class = "search-keyword" placeholder="🔍 How can we help you today...?" />
+			</div>
+		</header>
+		
+		<section>
+			<div class="container">
+				<div class="reg">
+					<a href="#" class="signup">Sign Up</a><br>
+					<a href="http://127.0.0.1:8000/signin" class="signin">Sign In</a>
+				</div>
+				<form method="post" action="{% url 'signup' %}">{% csrf_token %}
+					{% if form.errors %}
+					<p>There are errors in the form!</p>
+					{% endif %}
+					<fieldset class="form-group">
+						{{ form | crispy }} 
+					</fieldset>
+					<input type="submit" value="Sign Up" class="sumBtn" />
+
+
+				</form>
+			</div>
+		</section>
+	</body>
+</html>

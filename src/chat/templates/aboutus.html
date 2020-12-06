@@ -1,0 +1,142 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0"/>
+		<title>About Us</title>
+
+		<style type='text/css'>
+			*{
+			margin: 0;
+			padding: 0;
+			box-sizing:border-box;
+			}
+
+			header{
+				padding: 20px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+					background-color: #BA55D3;
+			}
+
+			header .logo h2{
+				font-weight: 500;
+				font-size: 1.5em;
+			}
+
+			header .navbar{
+				display: flex;
+				flex-direction: row;	
+			}
+
+			header .navbar .navbar-links{
+				padding-top: 8px;	
+				display: flex;
+				flex-direction: row;
+				padding-right: 80px;
+			}
+
+			header .navbar .navbar-links li{
+				list-style: none;
+				font-weight: 300;
+				padding-right: 20px;	
+			}
+
+			header .navbar .navbar-links li a{
+				color: #fff;
+				text-decoration: none;
+			}
+
+			header .navbar .navbar-links li a:hover,
+			header .navbar .navbar-links li a:focus{
+				color: #79258e;
+			}
+
+			header .navbar .search-container .search-keyword{
+				width: 240px;
+				outline: none;
+				border-radius: 15px;
+				padding: 10px;
+				border: none;
+				color: #333;
+				font-weight: 300;
+			}
+
+			body{
+				background: #BA55D3;
+				color: #fff;
+			}
+
+			header{
+				padding: 20px 5%;
+			}
+
+			header .logo h2 a{
+				color: #fff;
+				text-decoration: none;
+				cursor: pointer;
+				font-weight: 400;
+				font-size: 1em;
+			}
+
+			section .container{
+				padding: 0px 5%;
+				margin-top: 50px;	
+			}
+
+			section .container .section-title{
+				padding: 20px 0;
+			}
+			section .container .section-title h3{
+				font-size: 3em;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+
+			section .container .section p{
+				font-size: 1.3em;
+				line-height: 1.5em;
+				letter-spacing: 2px;
+				font-weight: 300;
+			}
+
+			section .container .imgSection{
+				float: right;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h2>HealthCare Plus</h2>
+			</div>
+			{% include "navbar.html" %}
+		</header>
+		
+		<section>
+			<div class="container">
+				<div class="section">
+					<div class="section-title">
+						<h3>About Us</h3>
+					</div>
+					<p>This is a project made by four amateur developers for the 2020 ecx hackx hackathon. <br>
+					This solution was inspired byn the fact that due to the coronavirus pandemic many people were not allowed to see their doctors. <br>
+					This lead to a reduce in doctor patient appointments and uptick in the severity of the illnesses because of the fear of catching the coronavirus <br>
+					This project helps take care of the needs of people by allowing patients to communicate with their doctors over the internet and get diagnosis and expert recommendations <br>
+				    This also allows them to book specific in person appointments to avoid wait lines. <br>
+					This project was built using Django, Python,django Channels, JavaScript, jQuery Html, CSS, Redis and so many more packages and more importantly ❤.
+					<ul>
+						<li>Ilawole Motunrayo- Frontend Developer</li>
+						<li>Ndubuisi Isaac- Backend Developer</li>
+						<li>Michael Jeremy- mockup designer</li>
+						<li>Emmanuel Oni- Frontend Developer</li>
+					</ul></p>
+				</div>
+				<div class="imgSection">
+					<img src="https://webstockreview.net/images/clipart-doctor-team-5.png" style ='max-height: 300px;' class="img-responsive" alt=""/>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
